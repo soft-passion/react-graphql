@@ -1,0 +1,141 @@
+@import "styles/config";
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+
+  @include is-phone-portrait {
+    flex-direction: column;
+  }
+
+  .name-wrapper,
+  .type-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+    border: 1px solid $grey-color-4;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+
+  .name-wrapper {
+    position: relative;
+    width: 252px;
+
+    @include is-phone-portrait {
+      width: 100%;
+    }
+
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 13px;
+
+    @include is-phone-portrait {
+      margin-right: 0px;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -14px;
+      width: 1px;
+      height: 32px;
+      transform: translate(0, -50%);
+      background: #e2e2e2;
+    }
+
+    img {
+      width: 13px;
+      height: 13px;
+      margin-right: 22px;
+      cursor: pointer;
+    }
+
+    input {
+      border: 0px solid;
+      background-color: transparent;
+      color: $grey-color-2;
+
+      width: calc(100% - 80px);
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .type-wrapper {
+    position: relative;
+    width: 176px;
+
+    @include is-phone-portrait {
+      width: 100%;
+    }
+
+    padding-top: 18px;
+    padding-bottom: 18px;
+    margin-left: 12px;
+    overflow: hidden;
+
+    @include is-phone-portrait {
+      margin-left: 0px;
+      margin-top: 10px;
+    }
+
+    .select {
+      text-align: left;
+      width: 100%;
+
+      position: relative;
+
+      .arrow {
+        z-index: 12;
+
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 24px;
+        height: 100%;
+        background: url("/images/arrow.svg") no-repeat;
+        background-position: left;
+        background-color: white;
+        background-size: 6px;
+
+        transform: translate(0, -50%);
+      }
+
+      select {
+        z-index: 10;
+
+        position: relative;
+        width: 100%;
+        border: 0;
+        border-radius: 0;
+        padding-left: 16px;
+        color: #000000;
+        background: transparent;
+        outline: none;
+        appearance: none;
+        -webkit-appearance: none;
+
+        options {
+          color: #000000;
+        }
+      }
+    }
+  }
+
+  .seperate {
+    width: 1px;
+    height: 32px;
+    border: solid 1px #e2e2e2;
+  }
+
+}

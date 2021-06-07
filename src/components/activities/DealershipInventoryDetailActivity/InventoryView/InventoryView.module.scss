@@ -1,0 +1,62 @@
+@import "styles/config";
+
+.container {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+
+  @include is-desktop() {
+    padding-left: 3.32%;
+    padding-right: 3.32%;
+  }
+
+  @include is-phone-portrait() {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.dealership-logo {
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  width: 86px;
+  height: 86px;
+  transform: translate(-50%, -50%);
+
+  @include is-phone-portrait {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.dealership-name {
+  margin-top: 60px;
+  color: #000000;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.dealership-address {
+  margin-top: 8px;
+  margin-bottom: 56px;
+  color: $grey-color-1;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.vehicle-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include is-phone-portrait() {
+    grid-template-columns: auto;
+  }
+}

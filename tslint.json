@@ -1,0 +1,71 @@
+{
+  "extends": "tslint:recommended",
+  "linterOptions": {
+    "exclude": [
+      "./src/generated/**"
+    ]
+  },
+  "rules": {
+    "indent": [true, "spaces", 2],
+    "quotemark": [
+      false,
+      "single",
+      "double",
+      "avoid-template",
+      "jsx-double"
+    ],
+    "whitespace": [true, "check-module"],
+    "no-console": false,
+    "no-empty": false,
+    "max-line-length": false,
+    "max-classes-per-file": false,
+    "no-magic-numbers": false,
+    "eofline": true,
+    "prefer-const": true,
+    "arrow-return-shorthand": true,
+    "interface-name": true,
+    "newline-before-return": false,
+    "no-trailing-whitespace": true,
+    "ordered-imports": false,
+    "cyclomatic-complexity": false,
+    "no-duplicate-imports": true,
+    "newline-per-chained-call": false,
+    "no-irregular-whitespace": true,
+    "no-consecutive-blank-lines": false,
+    "member-ordering": false,
+    "no-var-requires": false,
+    "variable-name": [
+      false
+    ],
+    "member-access": true,
+    "arrow-parens": [
+      true,
+      "ban-single-arg-parens"
+    ],
+    "semicolon": [
+      true,
+      "always",
+      "ignore-bound-class-methods"
+    ],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": {
+          "objects": "never",
+          "arrays": "never",
+          "functions": "never",
+          "typeLiterals": "never"
+        },
+        "esSpecCompliant": true
+      }
+    ],
+    "no-empty-interface": false,
+    "import-spacing": true,
+    "object-literal-key-quotes": false,
+    "object-literal-shorthand": true,
+    "object-literal-sort-keys": [
+      false,
+      "always"
+    ]
+  }
+}

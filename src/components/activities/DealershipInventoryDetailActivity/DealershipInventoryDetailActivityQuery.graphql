@@ -1,0 +1,20 @@
+query DealershipDetailActivity($id: ID!) {
+  dealership(id: $id) {
+    id
+    name
+    address
+    logoUrl
+    vehicles {
+      id
+      name
+      address
+      imageUrl
+      priceCentsPerDay
+      type {
+        id
+        name
+        displayName
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+@import "styles/config";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  padding-left: 10%;
+  padding-right: 10%;
+
+  @include is-desktop() {
+    padding-left: 3.32%;
+    padding-right: 3.32%;
+  }
+
+  @include is-phone-portrait() {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.appstore-img {
+  width: 100%;
+  height: 35px;
+  background-image: url("/images/available-on-app-store-button-graphic.png");
+  background-image: -webkit-image-set(url("/images/available-on-app-store-button-graphic.png") 1x,
+      url("/images/available-on-app-store-button-graphic@2x.png") 2x,
+      url("/images/available-on-app-store-button-graphic@3x.png") 3x,
+    );
+  background-image: image-set(url("/images/available-on-app-store-button-graphic.png") 1x,
+      url("/images/available-on-app-store-button-graphic@2x.png") 2x,
+      url("/images/available-on-app-store-button-graphic@3x.png") 3x,
+    );
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.legal-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+  color: $grey-color-3;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+
+  @include is-phone-portrait() {
+    flex-direction: column;
+  }
+
+  a {
+    position: relative;
+    color: $grey-color-3;
+    text-decoration: none;
+
+    &:hover {
+      color: black;
+      text-decoration: underline;
+    }
+  }
+
+  .rr-wrapper,
+  .map-wrapper,
+  .terms-wrapper {
+    display: flex;
+    justify-content: center;
+
+    @include is-phone-portrait() {
+      margin-top: 12px;
+    }
+  }
+
+  @include is-phone-portrait() {
+    .rr-wrapper {
+      margin-top: 0px !important;
+    }
+  }
+
+  .privacy {
+    margin-left: 12px;
+  }
+
+  .maps {
+    margin-right: 10px;
+  }
+
+}

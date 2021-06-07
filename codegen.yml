@@ -1,0 +1,16 @@
+overwrite: true
+schema: "https://candidate-api-2020-03.ironforge.co/graphql"
+documents: "src/**/*.graphql"
+generates:
+  src/generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+    config:
+      withHooks: true
+      withHOC: false
+      withComponent: false
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"

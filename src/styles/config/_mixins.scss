@@ -1,0 +1,23 @@
+@mixin is-phone-portrait() {
+  @media (max-width: $phone-portrait) {
+    @content;
+  }
+}
+
+@mixin is-phone-landscape() {
+  @media (max-width: $phone-landscape) {
+    @content;
+  }
+}
+
+@mixin is-tablet() {
+  @media (max-width: $table) {
+    @content;
+  }
+}
+
+@mixin is-desktop() {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
